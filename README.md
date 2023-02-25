@@ -12,4 +12,6 @@ GET: To read (or retrieve) a representation of a resource, use the HTTP GET tech
 * The response.json() gives you an object containing everything that was there in the response
 * In this particular scenario - the information that we required was placed in an array, accessible by hitting the key named "data" in the json. Which is why we assign response.json()['Search'] to our variable data.
 * The variable data here now contains an array of objects.
-
+* The to extract the keys of the first object in the array, type-cast it into a list for ease of access and store it in the variable called _headers_.
+* So to get the values; the RHS  of every object in the array, we iterate over every object in the array and call their ".values()" function to extract the values.
+* The later part uses the Pandas library to write to an excel sheet that contains the headers and data. The excel file name is given with the file destination.
